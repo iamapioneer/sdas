@@ -1,0 +1,34 @@
+.Testimonial {
+    @extend .clearfix;
+
+    &-photo {
+        width:100px;
+        height:100px;
+        background-size: cover;
+        border-radius: 50%;
+    }
+
+    &-text {
+        color:white;
+        text-align: justify;
+    }
+
+    &-tag {
+        color:white;
+        text-align: right;
+        text-transform: uppercase;
+        letter-spacing: .3rem;
+        margin-top: 15px;
+    }
+
+    &-leftContainer {
+        float:left;
+    }
+
+    &-rightContainer {
+        float:left;
+        width:80%;
+        box-sizing:border-box;
+        padding-left:30px;
+    }
+}

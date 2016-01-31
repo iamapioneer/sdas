@@ -1,0 +1,391 @@
+/*
+Theme Name: Airplane
+Theme URI: https://austen.io
+Author: Austen Payan
+Author URI: http://austen.io
+Description: Custom theme for San Diego Airplane Sales
+Version: 1.0
+License: Private
+
+*/
+
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.6.0
+*/
+html {
+  color: #000;
+  background: #FFF; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+input, textarea, select {
+  *font-size: 100%; }
+
+legend {
+  color: #000; }
+
+del, ins {
+  text-decoration: none; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+p {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px; }
+
+body, html {
+  width: 100%;
+  height: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+div, span, p, a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px; }
+
+.bold {
+  font-weight: bold; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.clear {
+  clear: both; }
+
+.spacer {
+  margin: 0 15px; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.clearfix:after, .plane-list:after, .footer:after, .Testimonial:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.container {
+  width: 1000px;
+  margin: auto; }
+
+.header-banner {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3px 0;
+  background-color: #BD1C26;
+  position: relative;
+  color: white;
+  line-height: 2.4rem;
+  font-size: .9rem; }
+  .header-banner ul {
+    float: right;
+    height: 100%; }
+  .header-banner a {
+    color: white; }
+  .header-banner li {
+    font-size: 1rem;
+    color: white;
+    float: left;
+    height: 100%;
+    position: relative;
+    margin-left: 60px; }
+    .header-banner li i {
+      font-size: 1.5rem;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      -webkit-transform: translate(0%, -50%);
+      -moz-transform: translate(0%, -50%);
+      -ms-transform: translate(0%, -50%);
+      -o-transform: translate(0%, -50%);
+      transform: translate(0%, -50%);
+      right: 105%; }
+
+.navigation-container {
+  width: 100%;
+  height: 90px;
+  border: 2px solid #cfcfcf; }
+
+.logo-container {
+  float: left;
+  box-sizing: border-box;
+  padding: 12px 0; }
+  .logo-container img {
+    width: 180px; }
+
+.navigation {
+  float: right;
+  box-sizing: border-box;
+  padding: 23px 0; }
+  .navigation li {
+    float: left;
+    box-sizing: border-box;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-weight: bold; }
+    .navigation li:first-child {
+      padding-left: 0; }
+    .navigation li:last-child {
+      padding-right: 0; }
+
+.plane-list {
+  display: flex; }
+  .plane-list .Card {
+    flex-grow: 1;
+    float: left; }
+
+.title {
+  font-weight: bold;
+  color: #E7BB6B;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 1.2rem; }
+
+.footer {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  position: relative;
+  color: white;
+  background-image: url(img/pattern.png);
+  background-size: 450px;
+  background-repeat: repeat; }
+  .footer .container {
+    background-color: #1F2B45;
+    box-sizing: border-box;
+    padding: 50px 40px; }
+  .footer .back-to-top-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    top: 0%; }
+  .footer .column-left {
+    width: 66.66667%;
+    float: left; }
+  .footer .column-right {
+    width: 33.33333%;
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+    padding-left: 30px; }
+    .footer .column-right img {
+      width: 90%; }
+  .footer .contact-info {
+    font-size: .9rem;
+    font-weight: bold; }
+    .footer .contact-info td {
+      padding-bottom: 8px; }
+      .footer .contact-info td:first-child {
+        text-align: center; }
+    .footer .contact-info i {
+      font-size: 2rem;
+      margin-right: 15px; }
+  .footer-module {
+    margin-bottom: 30px; }
+
+.Button {
+  cursor: pointer; }
+  .Button--red {
+    background-color: #BD1C26;
+    display: inline-block;
+    border-radius: 2px;
+    color: white;
+    box-sizing: border-box;
+    padding: 9px 20px;
+    text-align: uppercase;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #9e1720; }
+    .Button--red:hover {
+      background-color: #ab1922; }
+  .Button--stretch {
+    width: 100%; }
+  .Button--tan {
+    background-color: #E7BB6B;
+    border: 2px solid #e0a73f; }
+  .Button--icon i {
+    font-size: 2rem;
+    color: white; }
+  .Button--icon-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: .6rem;
+    font-weight: bold;
+    top: 75%; }
+  .Button--circle {
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 15px; }
+
+.Jumbotron {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  padding: 35px 0; }
+  .Jumbotron-action-container {
+    position: relative;
+    float: right;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(31, 43, 69, 0.5);
+    margin-top: 200px; }
+    .Jumbotron-action-container .Button {
+      width: 100%;
+      text-align: center; }
+  .Jumbotron-action-title {
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 10px; }
+  .Jumbotron-title {
+    color: #E7BB6B;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.3rem; }
+    .Jumbotron-title--right {
+      text-align: right; }
+  .Jumbotron-subtitle {
+    color: white; }
+    .Jumbotron-subtitle--right {
+      text-align: right; }
+
+.Banner {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 55px 0; }
+  .Banner-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase; }
+  .Banner-body {
+    margin-top: 15px; }
+  .Banner--blue {
+    background-color: #1F2B45;
+    border-top: 2px solid #0f1522;
+    border-bottom: 2px solid #0f1522; }
+    .Banner--blue .Banner-title {
+      color: #E7BB6B; }
+  .Banner--default {
+    background-color: white; }
+    .Banner--default .Banner-title {
+      color: #BD1C26; }
+
+.Testimonial-photo {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border-radius: 50%; }
+
+.Testimonial-text {
+  color: white;
+  text-align: justify; }
+
+.Testimonial-tag {
+  color: white;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  margin-top: 15px; }
+
+.Testimonial-leftContainer {
+  float: left; }
+
+.Testimonial-rightContainer {
+  float: left;
+  width: 80%;
+  box-sizing: border-box;
+  padding-left: 30px; }
+
+.Card {
+  box-sizing: border-box;
+  padding: 0 7px; }
+  .Card-image {
+    border-radius: 3px 3px 0 0;
+    height: 140px;
+    background-size: cover;
+    background-position: center; }
+  .Card-body {
+    background-color: #E8E8E8;
+    border-radius: 0 0 3px 3px;
+    box-sizing: border-box;
+    padding: 14px;
+    padding-top: 10px;
+    border: 1px solid #b5b5b5;
+    border-top: 0; }
+    .Card-body .Button {
+      width: 100%;
+      text-align: center; }
+  .Card-title {
+    font-size: 1.4rem;
+    font-weight: bold; }
+  .Card-info {
+    margin-bottom: 20px; }

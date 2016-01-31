@@ -1,0 +1,33 @@
+.Banner {
+	width:100%;
+	box-sizing:border-box;
+	padding: 55px 0;
+
+	&-title {
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+	}
+
+	&-body {
+		margin-top: 15px;
+	}
+
+	&--blue {
+		background-color: $blue;
+		border-top: 2px solid darken($blue, 10%);
+		border-bottom: 2px solid darken($blue, 10%);
+
+		.Banner-title {
+			color:$tan;
+		}
+	}
+
+	&--default {
+		background-color: white;
+		.Banner-title {
+			color:$red;
+		}
+	}
+}

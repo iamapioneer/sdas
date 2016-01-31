@@ -1,0 +1,35 @@
+.Card {
+    box-sizing:border-box;
+    padding:0 7px;
+
+    &-image {
+        border-radius: 3px 3px 0 0;
+        height:140px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &-body {
+        background-color: $light;
+        border-radius: 0 0 3px 3px;
+        box-sizing:border-box;
+        padding:14px;
+        padding-top: 10px;
+        border:1px solid darken($light, 20%);
+        border-top: 0;
+
+        .Button {
+            width:100%;
+            text-align: center; 
+        }
+    }
+
+    &-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    &-info {
+        margin-bottom: 20px;
+    }
+}

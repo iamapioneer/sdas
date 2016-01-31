@@ -1,0 +1,49 @@
+.Button {
+    cursor: pointer;
+
+    &--red {
+        background-color: $red;
+        display: inline-block;
+        border-radius: 2px;
+        color:white;
+        box-sizing:border-box;
+        padding:9px 20px;
+        text-align: uppercase;
+        font-weight: bold;
+        text-transform: uppercase;
+        border:2px solid darken($red, 7%);
+
+        &:hover {
+            background-color: darken($red, 4%);
+        }  
+    }
+
+    &--stretch {
+        width:100%;
+    }
+
+    &--tan {
+        background-color: $tan;
+        border:2px solid darken($tan, 10%);
+    }
+
+    &--icon {
+        i {
+            font-size: 2rem;
+            color:white;
+        }
+
+        &-text {
+            @include center;
+            font-size: .6rem;
+            font-weight: bold;
+            top:75%;
+        }
+    }
+
+    &--circle {
+        border-radius: 50%;
+        box-sizing : border-box;
+        padding:15px;
+    }
+}
