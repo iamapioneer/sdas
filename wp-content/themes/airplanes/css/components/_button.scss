@@ -18,8 +18,27 @@
         }  
     }
 
+    &--default {
+        background-color: $light;
+        display: inline-block;
+        border-radius: 2px;
+        color:$text;
+        box-sizing:border-box;
+        padding:9px 20px;
+        text-align: uppercase;
+        font-weight: bold;
+        text-transform: uppercase;
+        border:2px solid darken($light, 7%);
+
+        &:hover {
+            background-color: darken($light, 4%);
+        }
+
+    }
+
     &--stretch {
         width:100%;
+        text-align: center;
     }
 
     &--tan {

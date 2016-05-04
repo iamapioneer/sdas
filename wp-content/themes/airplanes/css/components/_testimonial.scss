@@ -1,6 +1,9 @@
 .Testimonial {
     @extend .clearfix;
 
+    box-sizing:border-box;
+    padding:20px 100px 0 100px;
+
     &-photo {
         width:100px;
         height:100px;
@@ -11,6 +14,10 @@
     &-text {
         color:white;
         text-align: justify;
+
+        @include breakpoint(650px) {
+            text-align: left;
+        }
     }
 
     &-tag {
@@ -23,6 +30,10 @@
 
     &-leftContainer {
         float:left;
+
+        @include breakpoint(650px) {
+            display: none;
+        }
     }
 
     &-rightContainer {
@@ -30,5 +41,10 @@
         width:80%;
         box-sizing:border-box;
         padding-left:30px;
+
+        @include breakpoint(650px) {
+            width:100%;
+            padding-left: 0;
+        }
     }
 }

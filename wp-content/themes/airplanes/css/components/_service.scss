@@ -1,0 +1,40 @@
+.Service {
+    margin-bottom: 60px;
+    border:2px solid $light;
+    border-radius: 5px;
+    box-sizing:border-box;
+    padding:25px;
+    padding-bottom: 35px;
+
+    &-titleContainer {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    &-icon {
+        font-size: 2.5rem;
+    }
+
+    &-body {
+        @extend .clearfix;
+    }
+
+    &-text {
+        float:left;
+        width:60%;
+        box-sizing:border-box;
+        padding-right: 20px;
+        font-size: 1.1rem;
+    }
+    &-image {
+        width:40%;
+        float:left;
+        background-color: $light; 
+    }
+}

@@ -2,6 +2,71 @@
 
 <?php get_header() ?>
 
-<p>Services Page</p>
+<div class="Jumbotron" style="background-image:url(<?php bloginfo('template_directory') ?>/img/plane-sunset.jpg)">
+    <div class="container">
+        <h2 class="Jumbotron-title Jumbotron-title--light">Your plane belongs in the sky.<br>Let us help you keep it here.</h2>    
+    </div>
+</div>
+<div class="Banner Banner--default">
+    <div class="container">
+        <div class="Banner-body">
+            <div class="Service">
+                <div class="Service-titleContainer">
+                    <i class="Service-icon ion-wrench"></i>
+                    <h3 class="Service-title">Maintenance</h3>                
+                </div>
+                <div class="Service-body">
+                    <div class="Service-text">
+                        <div class="text-group">
+                            <p>Human-centered design prosperity; small-scale farmers donate; recognition, inspire social change Kickstarter strengthen democracy volunteer. Cooperation vaccine education improving quality partnership sustainability. United Nations provide global health respond global leaders detection billionaire philanthropy. Rural outcomes readiness disrupt benefit efficient incubation. Worldwide partner enabler underprivileged developing. Shift, Andrew Carnegie, safety healthcare policy truth. Working alongside; natural resources social good insurmountable challenges, agenda meaningful breakthrough insights legal aid revitalize.</p>
+                        </div>
+                        <div class="Button Button--red">Contact Us For More Information</div>                        
+                    </div>
+                    <div class="Service-image square"></div>
+                </div>
+            </div>
+            <div class="Service">
+                <div class="Service-titleContainer">
+                    <i class="Service-icon ion-contrast"></i>
+                    <h3 class="Service-title">Restoration</h3>                
+                </div>
+                <div class="Service-body">
+                    <div class="Service-text">
+                        <div class="text-group">
+                            <p class="bold">Affordable Aircraft Maintenance &amp; Cosmetic Refurbishment is here</p>
+                            <p>We At San Diego Aircraft  Sales Are Excited To Announce That The Name You Have Trusted And Relied On For Over 52 Years To Serve You In The Area Of Sales And Acquisition Can Now Be Your Trusted Source Of Affordable Maintenance And Cosmetic Refurbishment.</p>
+                        </div>
+                        <div class="text-group">
+                            <p class="bold">The Best labour rates in Southern California</p>
+                            <p>Our Team Has Been Carefully Assembled For Over 24 Years To Maintain And Refurbish Our Own Planes.  We Are Now Offering That Same Team To You The Customer.  Whether Your Needs Range From Routine Maintenance Items Such As Oil Changes, Annual Inspections Or A Host Of Many General Aviation  Needs  To Engine Installations, New Glass Or Complete New Interiors, Our Team Is Here To Serve You.   All Work Is Done By Licensed A&P Mechanics.  All Materials Used Are FAA Certified.   Call today For A “No Obligation” Consultation On Any Work You Are Contemplating.</p>
+                        </div>
+                        <div class="Button Button--red">Contact Us For More Information</div>                        
+                    </div>
+                    <div class="Service-image square"></div>
+                </div>
+            </div>
+            <div class="Service">
+                <div class="Service-titleContainer">
+                    <i class="Service-icon ion-pinpoint"></i>
+                    <h3 class="Service-title">Aquisitions</h3>                
+                </div>
+                <div class="Service-body">
+                    <div class="Service-text">
+                        <div class="text-group">
+                            <p class="bold">Affordable Aircraft Maintenance &amp; Cosmetic Refurbishment is here</p>
+                            <p>We At San Diego Aircraft  Sales Are Excited To Announce That The Name You Have Trusted And Relied On For Over 52 Years To Serve You In The Area Of Sales And Acquisition Can Now Be Your Trusted Source Of Affordable Maintenance And Cosmetic Refurbishment.</p>
+                        </div>
+                        <div class="text-group">
+                            <p class="bold">The Best labour rates in Southern California</p>
+                            <p>Our Team Has Been Carefully Assembled For Over 24 Years To Maintain And Refurbish Our Own Planes.  We Are Now Offering That Same Team To You The Customer.  Whether Your Needs Range From Routine Maintenance Items Such As Oil Changes, Annual Inspections Or A Host Of Many General Aviation  Needs  To Engine Installations, New Glass Or Complete New Interiors, Our Team Is Here To Serve You.   All Work Is Done By Licensed A&P Mechanics.  All Materials Used Are FAA Certified.   Call today For A “No Obligation” Consultation On Any Work You Are Contemplating.</p>
+                        </div>
+                        <div class="Button Button--red">Contact Us For More Information</div>                        
+                    </div>
+                    <div class="Service-image square"></div>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
 
 <?php get_footer() ?>

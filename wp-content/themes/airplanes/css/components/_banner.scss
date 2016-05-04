@@ -1,33 +1,53 @@
 .Banner {
-	width:100%;
-	box-sizing:border-box;
-	padding: 55px 0;
+    width:100%;
+    box-sizing:border-box;
+    padding: 55px 0;
 
-	&-title {
-		text-align: center;
-		font-weight: bold;
-		font-size: 1.2rem;
-		text-transform: uppercase;
-	}
+    &-title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.4rem;
+        text-transform: uppercase;
 
-	&-body {
-		margin-top: 15px;
-	}
+        &--big {
+            font-size: 2.25rem;
+        }
 
-	&--blue {
-		background-color: $blue;
-		border-top: 2px solid darken($blue, 10%);
-		border-bottom: 2px solid darken($blue, 10%);
+        &--inline {
+            display: inline-block;
+        }
 
-		.Banner-title {
-			color:$tan;
-		}
-	}
+    }
 
-	&--default {
-		background-color: white;
-		.Banner-title {
-			color:$red;
-		}
-	}
+    &-body {
+        margin-top: 15px;
+
+        &--centered {
+            text-align: center;
+        }
+    }
+
+    &--blue {
+        background-color: $blue;
+        border-top: 2px solid darken($blue, 10%);
+        border-bottom: 2px solid darken($blue, 10%);
+        color:white;
+
+        .Banner-title {
+            color:$tan;
+        }
+    }
+
+    &--image {
+        background-position: center;
+        background-size: cover;
+    }
+
+    &--default {
+        background-color: white;
+
+        .Banner-title {
+            color:$red;
+        }
+    }
 }

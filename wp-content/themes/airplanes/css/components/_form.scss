@@ -1,0 +1,11 @@
+.Form {
+    box-sizing:border-box;
+    padding:25px;
+    border:2px solid $light;
+    border-radius: 5px;
+
+    input {
+        display: block;
+        margin-bottom: 15px;
+    }
+}

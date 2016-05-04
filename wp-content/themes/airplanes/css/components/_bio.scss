@@ -1,0 +1,53 @@
+.Bio {
+    @extend .clearfix;
+
+    position: relative;
+    width:100%;
+
+    &:first-child {
+        margin-top: 50px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 70px;
+
+        .Bio-text {
+            box-sizing:border-box;
+            border-bottom: 2px solid lighten($blue, 70%);
+        }
+    }
+
+    &-leftContainer {
+        position: relative;
+        width:20%;
+        float: left;
+    }
+    &-rightContainer {
+        position: relative;
+        width:80%;
+        float:left;
+        box-sizing:border-box;
+        padding-left:3%;
+    }
+
+    &-image {
+        width:100%;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        background-color: $light
+    }
+
+    &-text {
+        font-size: 1.1rem;
+        margin-top: 0px;
+        padding-bottom: 40px;
+    }
+
+    &-name {
+        color:$blue;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+}

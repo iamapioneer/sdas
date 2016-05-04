@@ -1,0 +1,60 @@
+.Plane {
+    width:100%;
+    box-sizing:border-box;
+    color:$text;
+    padding:15px 0 50px 0;
+
+    &-header {
+        @extend .u-clear;
+        background-color: white;
+        box-sizing:border-box;
+        padding:15px 0;
+        position: relative;
+    }
+
+    &-info {
+        @extend .u-clear;
+        margin: 20px 0;
+        font-size: 1.1rem;
+
+        table {
+            border:2px solid $light;
+            table-layout: auto;
+        }
+
+        tr {
+            border-bottom: 2px solid $light;
+        }
+
+        td {
+            padding:15px;
+
+            &:first-child {
+                font-weight: bold;
+                color:$red;
+                background-color: lighten($light, 6%);
+                border-right: 2px solid $light;
+                text-align: center;
+            }
+        }
+
+    }
+
+    &-title {
+        @include center;
+        color:$red;
+        font-size: 2.4rem;
+        font-weight: bold;
+    }
+
+    &-price {
+        @extend .Button;
+        @extend .Button--default;
+        background-color: white;
+        float:right;
+    }
+
+    &-slideshow {
+        border:2px solid $light;
+    }
+}

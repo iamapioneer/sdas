@@ -98,6 +98,11 @@ html {
 .bold {
   font-weight: bold; }
 
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+  padding: 5px 8px;
+  border: 1px solid #E8E8E8;
+  border-radius: 2px; }
+
 .uppercase {
   text-transform: uppercase; }
 
@@ -113,7 +118,7 @@ html {
 .pull-right {
   float: right; }
 
-.clearfix:after, .plane-list:after, .footer:after, .Testimonial:after {
+.clearfix:after, .plane-list:after, .footer:after, .Testimonial:after, .Bio:after, .Service-body:after {
   content: "";
   display: table;
   clear: both; }
@@ -121,6 +126,11 @@ html {
 .container {
   width: 1000px;
   margin: auto; }
+  @media (max-width: 1000px) {
+    .container {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 20px; } }
 
 .header-banner {
   width: 100%;
@@ -131,6 +141,9 @@ html {
   color: white;
   line-height: 2.4rem;
   font-size: .9rem; }
+  @media (max-width: 650px) {
+    .header-banner {
+      display: none; } }
   .header-banner ul {
     float: right;
     height: 100%; }
@@ -158,7 +171,9 @@ html {
 .navigation-container {
   width: 100%;
   height: 90px;
-  border: 2px solid #cfcfcf; }
+  box-sizing: border-box;
+  border-top: 2px solid #cfcfcf;
+  border-bottom: 2px solid #cfcfcf; }
 
 .logo-container {
   float: left;
@@ -167,33 +182,57 @@ html {
   .logo-container img {
     width: 180px; }
 
-.navigation {
+.navigation, .menu {
   float: right;
   box-sizing: border-box;
   padding: 23px 0; }
-  .navigation li {
+  @media (max-width: 750px) {
+    .navigation, .menu {
+      display: none; } }
+  .navigation li, .menu li {
     float: left;
     box-sizing: border-box;
     padding: 12px 30px;
     text-transform: uppercase;
     font-weight: bold; }
-    .navigation li:first-child {
-      padding-left: 0; }
-    .navigation li:last-child {
+    .navigation li:last-child, .menu li:last-child {
       padding-right: 0; }
+
+.menu .children {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 2px solid #E8E8E8;
+  z-index: 9; }
+  .menu .children li {
+    display: block;
+    width: 100%;
+    padding: 10px 20px; }
 
 .plane-list {
   display: flex; }
   .plane-list .Card {
+    flex-basis: 0;
     flex-grow: 1;
     float: left; }
+    @media (max-width: 850px) {
+      .plane-list .Card {
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 0; } }
+  @media (max-width: 850px) {
+    .plane-list {
+      display: block; } }
 
 .title {
   font-weight: bold;
   color: #E7BB6B;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
   font-size: 1.2rem; }
+
+.text-group {
+  margin-bottom: 20px; }
 
 .footer {
   padding-top: 0 !important;
@@ -201,7 +240,7 @@ html {
   position: relative;
   color: white;
   background-image: url(img/pattern.png);
-  background-size: 450px;
+  background-size: 550px;
   background-repeat: repeat; }
   .footer .container {
     background-color: #1F2B45;
@@ -220,6 +259,12 @@ html {
   .footer .column-left {
     width: 66.66667%;
     float: left; }
+    @media (max-width: 650px) {
+      .footer .column-left {
+        width: 100%; }
+        .footer .column-left .Button, .footer .column-left .Plane-price {
+          width: 100%;
+          text-align: center; } }
   .footer .column-right {
     width: 33.33333%;
     float: left;
@@ -228,6 +273,9 @@ html {
     padding-left: 30px; }
     .footer .column-right img {
       width: 90%; }
+    @media (max-width: 650px) {
+      .footer .column-right {
+        display: none; } }
   .footer .contact-info {
     font-size: .9rem;
     font-weight: bold; }
@@ -241,7 +289,29 @@ html {
   .footer-module {
     margin-bottom: 30px; }
 
-.Button {
+.sales-plane-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%; }
+  .sales-plane-list .Card {
+    flex-grow: 1;
+    width: 25%;
+    margin-bottom: 15px; }
+
+.slideshow-container {
+  width: 100%;
+  height: 200px; }
+
+#map {
+  width: 100%;
+  height: 400px; }
+
+.u-clear::after, .Plane-header::after, .Plane-info::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.Button, .Plane-price {
   cursor: pointer; }
   .Button--red {
     background-color: #BD1C26;
@@ -256,8 +326,22 @@ html {
     border: 2px solid #9e1720; }
     .Button--red:hover {
       background-color: #ab1922; }
+  .Button--default, .Plane-price {
+    background-color: #E8E8E8;
+    display: inline-block;
+    border-radius: 2px;
+    color: #444;
+    box-sizing: border-box;
+    padding: 9px 20px;
+    text-align: uppercase;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #d6d6d6; }
+    .Button--default:hover, .Plane-price:hover {
+      background-color: #dedede; }
   .Button--stretch {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
   .Button--tan {
     background-color: #E7BB6B;
     border: 2px solid #e0a73f; }
@@ -297,7 +381,10 @@ html {
     border-radius: 5px;
     background-color: rgba(31, 43, 69, 0.5);
     margin-top: 200px; }
-    .Jumbotron-action-container .Button {
+    @media (max-width: 700px) {
+      .Jumbotron-action-container {
+        margin-top: 25px; } }
+    .Jumbotron-action-container .Button, .Jumbotron-action-container .Plane-price {
       width: 100%;
       text-align: center; }
   .Jumbotron-action-title {
@@ -310,8 +397,13 @@ html {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 2.3rem; }
+    @media (max-width: 700px) {
+      .Jumbotron-title {
+        font-size: 1.8rem; } }
     .Jumbotron-title--right {
       text-align: right; }
+    .Jumbotron-title--light {
+      color: white; }
   .Jumbotron-subtitle {
     color: white; }
     .Jumbotron-subtitle--right {
@@ -324,46 +416,65 @@ html {
   .Banner-title {
     text-align: center;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-transform: uppercase; }
+    .Banner-title--big {
+      font-size: 2.25rem; }
+    .Banner-title--inline {
+      display: inline-block; }
   .Banner-body {
     margin-top: 15px; }
+    .Banner-body--centered {
+      text-align: center; }
   .Banner--blue {
     background-color: #1F2B45;
     border-top: 2px solid #0f1522;
-    border-bottom: 2px solid #0f1522; }
+    border-bottom: 2px solid #0f1522;
+    color: white; }
     .Banner--blue .Banner-title {
       color: #E7BB6B; }
+  .Banner--image {
+    background-position: center;
+    background-size: cover; }
   .Banner--default {
     background-color: white; }
     .Banner--default .Banner-title {
       color: #BD1C26; }
 
-.Testimonial-photo {
-  width: 100px;
-  height: 100px;
-  background-size: cover;
-  border-radius: 50%; }
-
-.Testimonial-text {
-  color: white;
-  text-align: justify; }
-
-.Testimonial-tag {
-  color: white;
-  text-align: right;
-  text-transform: uppercase;
-  letter-spacing: .3rem;
-  margin-top: 15px; }
-
-.Testimonial-leftContainer {
-  float: left; }
-
-.Testimonial-rightContainer {
-  float: left;
-  width: 80%;
+.Testimonial {
   box-sizing: border-box;
-  padding-left: 30px; }
+  padding: 20px 100px 0 100px; }
+  .Testimonial-photo {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 50%; }
+  .Testimonial-text {
+    color: white;
+    text-align: justify; }
+    @media (max-width: 650px) {
+      .Testimonial-text {
+        text-align: left; } }
+  .Testimonial-tag {
+    color: white;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    margin-top: 15px; }
+  .Testimonial-leftContainer {
+    float: left; }
+    @media (max-width: 650px) {
+      .Testimonial-leftContainer {
+        display: none; } }
+  .Testimonial-rightContainer {
+    float: left;
+    width: 80%;
+    box-sizing: border-box;
+    padding-left: 30px; }
+    @media (max-width: 650px) {
+      .Testimonial-rightContainer {
+        width: 100%;
+        padding-left: 0; } }
 
 .Card {
   box-sizing: border-box;
@@ -381,7 +492,7 @@ html {
     padding-top: 10px;
     border: 1px solid #b5b5b5;
     border-top: 0; }
-    .Card-body .Button {
+    .Card-body .Button, .Card-body .Plane-price {
       width: 100%;
       text-align: center; }
   .Card-title {
@@ -389,3 +500,119 @@ html {
     font-weight: bold; }
   .Card-info {
     margin-bottom: 20px; }
+
+.Bio {
+  position: relative;
+  width: 100%; }
+  .Bio:first-child {
+    margin-top: 50px; }
+  .Bio:not(:last-child) {
+    margin-bottom: 70px; }
+    .Bio:not(:last-child) .Bio-text {
+      box-sizing: border-box;
+      border-bottom: 2px solid #dae1ef; }
+  .Bio-leftContainer {
+    position: relative;
+    width: 20%;
+    float: left; }
+  .Bio-rightContainer {
+    position: relative;
+    width: 80%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 3%; }
+  .Bio-image {
+    width: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-color: #E8E8E8; }
+  .Bio-text {
+    font-size: 1.1rem;
+    margin-top: 0px;
+    padding-bottom: 40px; }
+  .Bio-name {
+    color: #1F2B45;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.6rem; }
+
+.Service {
+  margin-bottom: 60px;
+  border: 2px solid #E8E8E8;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 25px;
+  padding-bottom: 35px; }
+  .Service-titleContainer {
+    text-align: center;
+    margin-bottom: 20px; }
+  .Service-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .Service-icon {
+    font-size: 2.5rem; }
+  .Service-text {
+    float: left;
+    width: 60%;
+    box-sizing: border-box;
+    padding-right: 20px;
+    font-size: 1.1rem; }
+  .Service-image {
+    width: 40%;
+    float: left;
+    background-color: #E8E8E8; }
+
+.Plane {
+  width: 100%;
+  box-sizing: border-box;
+  color: #444;
+  padding: 15px 0 50px 0; }
+  .Plane-header {
+    background-color: white;
+    box-sizing: border-box;
+    padding: 15px 0;
+    position: relative; }
+  .Plane-info {
+    margin: 20px 0;
+    font-size: 1.1rem; }
+    .Plane-info table {
+      border: 2px solid #E8E8E8;
+      table-layout: auto; }
+    .Plane-info tr {
+      border-bottom: 2px solid #E8E8E8; }
+    .Plane-info td {
+      padding: 15px; }
+      .Plane-info td:first-child {
+        font-weight: bold;
+        color: #BD1C26;
+        background-color: #f7f7f7;
+        border-right: 2px solid #E8E8E8;
+        text-align: center; }
+  .Plane-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #BD1C26;
+    font-size: 2.4rem;
+    font-weight: bold; }
+  .Plane-price {
+    background-color: white;
+    float: right; }
+  .Plane-slideshow {
+    border: 2px solid #E8E8E8; }
+
+.Form {
+  box-sizing: border-box;
+  padding: 25px;
+  border: 2px solid #E8E8E8;
+  border-radius: 5px; }
+  .Form input {
+    display: block;
+    margin-bottom: 15px; }

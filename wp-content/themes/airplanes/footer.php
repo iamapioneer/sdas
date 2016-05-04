@@ -1,5 +1,5 @@
     <div class="Banner Banner--blue footer">
-        <div class="Button Button--circle Button--tan Button--icon back-to-top-button">
+        <div class="Button Button--circle Button--tan Button--icon back-to-top-button" id="to-top">
             <i class="fa fa-chevron-up"></i>
             <span class="Button--icon-text">TOP</span>
         </div>
@@ -41,6 +41,7 @@
             <span>1987 N. Marshall AVE. Suite #10 El Cajon, CA</span><span class="spacer">&bull;</span><span>&copy; <?php echo date('Y') ?> San Diego Aircraft Sales</span><span class="spacer">&bull;</span><span>Made by <a href="http://austen.io">austen.io</a></span>
         </div>
     </div>
+    <script src="http://maps.google.com/maps/api/js"></script>
 <?php wp_footer(); ?>
 
 </body>

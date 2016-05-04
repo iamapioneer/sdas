@@ -6,23 +6,36 @@
         <p class="Jumbotron-subtitle Jumbotron-subtitle--right">Offering complete service from sales to repairs,<br>San Diego Aircraft Sales is your one stop shop for all things personal aircraft.</p>
         <div class="Jumbotron-action-container clearfix">
             <h2 class="Jumbotron-action-title">We want to buy your aircraft!</h2>
-            <div class="Button Button--red">Sell Us Your Plane</div>  
+            <a href="/sales/sell"><div class="Button Button--red">Sell Us Your Plane</div></a>
         </div>
     </div>
 </div>
 <div class="Banner Banner--blue">
     <div class="container">
         <h2 class="Banner-title">What People are saying</h2>
-        <div class="Banner-body">
-            <div class="Testimonial">
-                <div class="Testimonial-leftContainer">
-                    <div class="Testimonial-photo" style="background-image:url(<?php bloginfo('template_directory') ?>/img/test-testimonial.jpg)"></div>
+        <div class="Banner-body slideshow-container">
+            <div id="testimonialSlideshow">
+                <?php 
+                    $query = new WP_Query(array('post_type' => 'testimonial'));
+
+                    if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post()
+                 ?>
+                <div>
+                    <div class="Testimonial">
+                        <div class="Testimonial-leftContainer">
+                            <div class="Testimonial-photo" style="background-image:url(<?php the_field('image'); ?>)"></div>
+                        </div>
+                        <div class="Testimonial-rightContainer">
+                            <p class="Testimonial-text"><?php the_content(); ?></p>
+                            <p class="Testimonial-tag">- <?php the_field('name') ?> | <?php the_field('company') ?> | <?php the_field('location')  ?></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="Testimonial-rightContainer">
-                    <p class="Testimonial-text">Nelson Mandela initiative, United Nations shifting landscape future economic development Peace Corps Martin Luther King Jr.. Medecins du Monde; social impact transform theory of social change solution. Criteria affordable health care dedicated inclusive capitalism informal economies women's rights humanitarian relief opportunity expanding community ownership</p>
-                    <p class="Testimonial-tag">- John Smith | Company | CA</p>
+                <?php endwhile; else : ?>
+                    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                <?php endif; ?>
                 </div>
-            </div>
+            </div>    
         </div>
     </div>
 </div>
@@ -30,61 +43,29 @@
     <div class="container">
         <h2 class="Banner-title">Featured Planes:</h2>
         <div class="Banner-body plane-list">
+
+        <?php 
+            $query = new WP_Query(array('post_type' => 'plane'));
+
+            if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post()
+         ?>
             <div class="Card">
-                <div class="Card-image" style="background-image:url(<?php bloginfo('template_directory') ?>/img/plane-thumb-test.jpg)"></div>
+                <div class="Card-image" style="background-image:url(<?php the_field('featured_image') ?>)"></div>
                 <div class="Card-body">
-                    <h4 class="Card-title uppercase">1977 Rockwell Commander 112B</h4>
+                    <h4 class="Card-title uppercase"><?php the_title(); ?></h4>
                     <div class="Card-info">
-                        <p class="bold">N112Ls &bull; $64,000</p>
+                        <p class="bold"><?php the_field('number'); ?> &bull; $<?php the_field('price') ?></p>
                         &nbsp;
                         <p><span class="bold">Info</span></p>
-                        <p>General info here, nited Nations shifting landscape future economic development Peace Corps Martin Luther King Jr.. Medecins du Monde; social impact transform theory of social cha</p>
+                        <p><?php the_field('description'); ?></p>
                     </div>
-                    <div class="Button Button--red">Learn More <i class="fa fa-info-circle"></i></div>
+                    <a href="<?php the_permalink(); ?>"><div class="Button Button--red">Learn More <i class="fa fa-info-circle"></i></div></a>
                 </div>
             </div>
-            <div class="Card">
-                <div class="Card-image" style="background-image:url(<?php bloginfo('template_directory') ?>/img/plane-thumb-test.jpg)"></div>
-                <div class="Card-body">
-                    <h4 class="Card-title uppercase">1977 Rockwell Commander 112B</h4>
-                    <div class="Card-info">
-                        <p class="bold">N112Ls &bull; $64,000</p>
-                        &nbsp;
-                        <p><span class="bold">Info</span></p>
-                        <p>General info here, nited Nations shifting landscape future economic development Peace Corps Martin Luther King Jr.. Medecins du Monde; social impact transform theory of social cha</p>
-                    </div>
-                    <div class="Button Button--red">Learn More</div>
-                </div>
-            </div>
-            <div class="Card">
-                <div class="Card-image" style="background-image:url(<?php bloginfo('template_directory') ?>/img/plane-thumb-test.jpg)"></div>
-                <div class="Card-body">
-                    <h4 class="Card-title uppercase">1977 Rockwell Commander 112B</h4>
-                    <div class="Card-info">
-                        <p class="bold">N112Ls &bull; $64,000</p>
-                        &nbsp;
-                        <p><span class="bold">Info</span></p>
-                        <p>General info here, nited Nations shifting landscape future economic development Peace Corps Martin Luther King Jr.. Medecins du Monde; social impact transform theory of social cha</p>
-                    </div>
-                    <div class="Button Button--red">Learn More</div>
-                </div>
-            </div>
-            <div class="Card">
-                <div class="Card-image" style="background-image:url(<?php bloginfo('template_directory') ?>/img/plane-thumb-test.jpg)"></div>
-                <div class="Card-body">
-                    <h4 class="Card-title uppercase">1977 Rockwell Commander 112B</h4>
-                    <div class="Card-info">
-                        <p class="bold">N112Ls &bull; $64,000</p>
-                        &nbsp;
-                        <p><span class="bold">Info</span></p>
-                        <p>General info here, nited Nations shifting landscape future economic development Peace Corps Martin Luther King Jr.. Medecins du Monde; social impact transform theory of social cha</p>
-                    </div>
-                    <div class="Button Button--red">Learn More</div>
-                </div>
-            </div>
+        <?php endwhile; else : ?>
+            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+        <?php endif; ?>
         </div>
     </div>
 </div>
-
-
 <?php get_footer() ?>
